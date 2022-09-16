@@ -1,0 +1,32 @@
+CREATE TABLE item(movie_id int, 
+movie_title varchar(100), 
+release_date string, 
+video_release_date string, 
+IMDB_URL varchar(5000), 
+unknown tinyint, 
+Action tinyint,
+ Adventure tinyint, 
+Animation tinyint, 
+Children tinyint, 
+Comedy tinyint, 
+Crime tinyint, 
+Documentry tinyint, 
+Drama tinyint, 
+Fantasy tinyint, 
+Film_Noir tinyint,
+Horror tinyint, 
+Musical tinyint, 
+Mystery tinyint, 
+Romance tinyint, 
+Sci_Fi tinyint, 
+Thriller tinyint,
+War tinyint,
+Western tinyint)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '|' 
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+
+LOAD DATA LOCAL INPATH 'Downloads/ml-100k-hive/u.item'
+OVERWRITE INTO TABLE item;

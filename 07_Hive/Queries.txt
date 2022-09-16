@@ -1,0 +1,19 @@
+extract list of all movies rated with the following information per line -- movie id, movie title, release date, IMDB URL, average rating for the movie.
+
+SELECT movie_id, movie_title, release_date, imdb_url, avg(rating.rating)
+FROM item
+JOIN rating ON (item.movie_id = rating.item_id)
+GROUP BY rating.item_id, movie_id, movie_title, release_date, imdb_url
+LIMIT 10;
+
+
+
+
+For the movie id 376 and 495, what is the movie title, release date, IMDB URL, average rating 
+
+SELECT movie_id, movie_title, release_date, imdb_url, avg(rating.rating)
+FROM item
+JOIN rating ON (item.movie_id = rating.item_id)
+WHERE item.movie_id IN (376, 495)
+GROUP BY rating.item_id, movie_id, movie_title, release_date, imdb_url
+LIMIT 10;

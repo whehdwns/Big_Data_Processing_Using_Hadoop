@@ -1,0 +1,8 @@
+CREATE TABLE rating(user_id int, item_id int, rating int, rating_time bigint)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+
+LOAD DATA LOCAL INPATH 'Downloads/ml-100k-hive/u.data'
+OVERWRITE INTO TABLE rating;
