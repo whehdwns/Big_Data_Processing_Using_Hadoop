@@ -1,0 +1,14 @@
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" add kss k.s@gmail.com mypasswd married 1970/06/03 “favorite color” “red”
+
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" show kss
+
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" login kss mypasswd 128.220.101.100
+
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" show kss
+
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" add tom tom2@gmail.com mypasswd2 single 1990/08/19 “favorite color” “black”
+
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" listall
+
+java -jar "/home/hdadmin/NetBeansProjects/UserAdmin/dist/UserAdmin.jar" delete tom
+
